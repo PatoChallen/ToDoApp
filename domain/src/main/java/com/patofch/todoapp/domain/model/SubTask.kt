@@ -1,6 +1,6 @@
 package com.patofch.todoapp.domain.model
 
-data class ToDoSubTask(
+data class SubTask(
     val id: Int? = null,
     val taskId: Int? = null,
     val name: String,

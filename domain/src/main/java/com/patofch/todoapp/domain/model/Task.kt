@@ -1,10 +1,10 @@
 package com.patofch.todoapp.domain.model
 
-data class ToDoTask(
+data class Task(
     val id: Int? = null,
     val parentId: Int? = null,
     val name: String,
     val description: String,
-    val subTasks: List<ToDoSubTask> = emptyList(),
+    val subTasks: List<Task> = emptyList(),
     val status: String? = null
 )

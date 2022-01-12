@@ -1,9 +1,7 @@
 package com.patofch.todoapp.domain
 
 import com.patofch.todoapp.domain.repository.ToDoRepository
-import com.patofch.todoapp.domain.use_case.GetAllSubTasks
-import com.patofch.todoapp.domain.use_case.GetAllTasks
-import com.patofch.todoapp.domain.use_case.TasksUseCases
+import com.patofch.todoapp.domain.use_case.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.migration.DisableInstallInCheck
@@ -16,12 +14,14 @@ object DomainModule {
 
     @Provides
     @Singleton
-    fun provideCharacterUseCases(
+    fun provideTaskUseCases(
         toDoRepository: ToDoRepository
-    ): TasksUseCases {
-        return TasksUseCases(
-            getAllTasks = GetAllTasks(toDoRepository),
-            getAllSubTasks = GetAllSubTasks(toDoRepository)
+    ): TaskUseCases {
+        return TaskUseCases(
+            deleteTask = DeleteTask(toDoRepository),
+            getTasks = GetTasks(toDoRepository),
+            insertTask = InsertTask(toDoRepository),
+            updateTask = UpdateTask(toDoRepository)
         )
     }
 }

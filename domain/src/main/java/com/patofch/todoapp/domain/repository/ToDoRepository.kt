@@ -1,21 +1,16 @@
 package com.patofch.todoapp.domain.repository
 
 import androidx.lifecycle.LiveData
-import com.patofch.todoapp.domain.model.ToDoSubTask
-import com.patofch.todoapp.domain.model.ToDoTask
+import com.patofch.todoapp.domain.model.SubTask
+import com.patofch.todoapp.domain.model.Task
 
 interface ToDoRepository {
 
-    fun getAllTasks(): LiveData<List<ToDoTask>>
+    fun getTasks(): LiveData<List<Task>>
 
-    fun getAllSubTasks(taskId: Int): LiveData<List<ToDoSubTask>>
+    suspend fun updateTask(task: Task)
 
-    fun insertTask(toDoTask: ToDoTask)
+    suspend fun insertTask(task: Task)
 
-    fun deleteTask(toDoTask: ToDoTask)
-
-    fun insertSubTask(toDoSubTask: ToDoSubTask)
-
-    fun deleteSubTask(toDoSubTask: ToDoSubTask)
-
+    suspend fun deleteTask(task: Task)
 }
