@@ -5,6 +5,6 @@ data class Task(
     val parentId: Int? = null,
     val name: String,
     val description: String,
-    val subTasks: List<Task> = emptyList(),
+    val subTasks: MutableList<Task> = mutableListOf(),
     val status: String? = null
 )

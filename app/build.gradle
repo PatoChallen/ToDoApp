@@ -59,6 +59,7 @@ dependencies {
     def lifecycle_ktx_version = "2.4.0"
     def activity_compose_version = "1.4.0"
     def viewmodel_compose_version = "2.4.0"
+    def compose_livedata_version = "1.1.0-rc01"
     def hilt_version = "2.40.5"
     def coil_version = "1.4.0"
     def room_version = "2.3.0"
@@ -76,16 +77,17 @@ dependencies {
     implementation "com.google.android.material:material:$material_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_ktx_version"
 
-    // Compose
-//    implementation "androidx.compose.ui:ui:$compose_version"
-
-    // Integration with activities
-    implementation "androidx.activity:activity-compose:$activity_compose_version"
 
     // Compose
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling:$compose_version"
+
+    // Integration with live data
+    implementation "androidx.compose.runtime:runtime-livedata:$compose_livedata_version"
+
+    // Integration with activities
+    implementation "androidx.activity:activity-compose:$activity_compose_version"
 
     // Integration with ViewModels
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$viewmodel_compose_version"

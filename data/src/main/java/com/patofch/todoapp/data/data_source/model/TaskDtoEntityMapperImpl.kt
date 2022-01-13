@@ -12,7 +12,6 @@ internal class TaskDtoEntityMapperImpl : TaskEntityMapper<TaskDtoEntity> {
                 parentId = parentId,
                 name = name,
                 description = description,
-                subTasks = subTasks.map { mapToTask(it) },
                 status = status
             )
         }
@@ -25,7 +24,6 @@ internal class TaskDtoEntityMapperImpl : TaskEntityMapper<TaskDtoEntity> {
                 parentId = parentId,
                 name = name,
                 description = description,
-                subTasks = subTasks.map { mapToTaskDtoEntity(it) },
                 status = status
             )
         }

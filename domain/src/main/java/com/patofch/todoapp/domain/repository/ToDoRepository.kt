@@ -1,12 +1,11 @@
 package com.patofch.todoapp.domain.repository
 
-import androidx.lifecycle.LiveData
-import com.patofch.todoapp.domain.model.SubTask
 import com.patofch.todoapp.domain.model.Task
+import kotlinx.coroutines.flow.Flow
 
 interface ToDoRepository {
 
-    fun getTasks(): LiveData<List<Task>>
+    fun getTasks(): Flow<List<Task>>
 
     suspend fun updateTask(task: Task)
 
