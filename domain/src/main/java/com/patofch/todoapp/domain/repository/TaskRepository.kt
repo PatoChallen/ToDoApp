@@ -1,9 +1,9 @@
 package com.patofch.todoapp.domain.repository
 
-import com.patofch.todoapp.domain.model.Task
+import com.patofch.todoapp.domain.model.task.Task
 import kotlinx.coroutines.flow.Flow
 
-interface ToDoRepository {
+interface TaskRepository {
 
     fun getTasks(): Flow<List<Task>>
 

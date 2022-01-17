@@ -12,17 +12,14 @@ import com.patofch.todoapp.presentation.tasks.task_list.TaskListScreen
 import com.patofch.todoapp.ui.theme.ToDoAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
-class MainActivity : ComponentActivity() {
+class TodoSplash2Activity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val viewModel = viewModel<TaskViewModel>()
-            Log.e("MainActivity", "MainActivity recompose")
+            Log.e("SplashActivity", "SplashActivity recompose")
             ToDoAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    TaskListScreen(viewModel)
                 }
             }
         }

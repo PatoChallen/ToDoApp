@@ -1,11 +1,12 @@
 package com.patofch.todoapp.data.data_source.model
 
-import com.patofch.todoapp.domain.model.Task
-import com.patofch.todoapp.domain.model.TaskEntityMapper
+import com.patofch.todoapp.domain.model.task.Task
+import com.patofch.todoapp.domain.model.task.TaskEntityMapper
 import com.patofch.todoapp.domain.utils.toDate
 import com.patofch.todoapp.domain.utils.toDateString
+import javax.inject.Inject
 
-internal class TaskDtoEntityMapperImpl : TaskEntityMapper<TaskDtoEntity> {
+internal class TaskDtoEntityMapperImpl @Inject constructor() : TaskEntityMapper<TaskDtoEntity> {
 
     override fun mapToTask(entity: TaskDtoEntity): Task {
         return entity.run {

@@ -1,4 +1,4 @@
-package com.patofch.todoapp.domain.use_case
+package com.patofch.todoapp.domain.use_case.task
 
 import javax.inject.Inject
 

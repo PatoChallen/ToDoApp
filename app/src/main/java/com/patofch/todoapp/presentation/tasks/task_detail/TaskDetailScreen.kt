@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.patofch.todoapp.domain.model.Task
+import com.patofch.todoapp.domain.model.task.Task
 import com.patofch.todoapp.domain.utils.toDateString
 import com.patofch.todoapp.presentation.TaskViewModel
 import com.patofch.todoapp.ui.theme.ToDoAppTheme

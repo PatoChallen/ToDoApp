@@ -1,4 +1,4 @@
-package com.patofch.todoapp.domain.model
+package com.patofch.todoapp.domain.model.task
 
 interface TaskEntityMapper<Entity>  {
 

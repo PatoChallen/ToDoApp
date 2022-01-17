@@ -1,4 +1,4 @@
-package com.patofch.todoapp.data.data_source
+package com.patofch.todoapp.data.data_source.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
@@ -11,7 +11,8 @@ import com.patofch.todoapp.data.data_source.model.TaskDtoEntity
         TaskDtoEntity::class,
         CategoryDtoEntity::class
     ],
-    version = 1
+    version = 1,
+    exportSchema = true
 )
 @TypeConverters()
 internal abstract class ToDoDatabase: RoomDatabase() {

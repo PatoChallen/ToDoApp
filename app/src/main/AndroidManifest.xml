@@ -11,11 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToDoApp">
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.TodoActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.ToDoApp.NoActionBar">
+            android:theme="@style/Theme.ToDoApp.Starting"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

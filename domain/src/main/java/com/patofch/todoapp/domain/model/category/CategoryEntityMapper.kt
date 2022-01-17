@@ -1,4 +1,4 @@
-package com.patofch.todoapp.domain.model
+package com.patofch.todoapp.domain.model.category
 
 interface CategoryEntityMapper<Entity>  {
 

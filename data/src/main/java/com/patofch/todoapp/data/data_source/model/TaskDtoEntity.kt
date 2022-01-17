@@ -2,7 +2,6 @@ package com.patofch.todoapp.data.data_source.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.patofch.todoapp.domain.model.Category
 
 @Entity(tableName = "tasks")
 internal data class TaskDtoEntity(

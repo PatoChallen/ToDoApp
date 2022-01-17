@@ -1,4 +1,4 @@
-package com.patofch.todoapp.data.data_source
+package com.patofch.todoapp.data.data_source.database
 
 import androidx.room.Dao
 import androidx.room.Delete
