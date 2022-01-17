@@ -54,8 +54,8 @@ android {
 
 dependencies {
     def ktx_version = "1.7.0"
-    def appcompat_version = "1.4.0"
-    def material_version = "1.4.0"
+    def appcompat_version = "1.4.1"
+    def material_version = "1.5.0"
     def lifecycle_ktx_version = "2.4.0"
     def activity_compose_version = "1.4.0"
     def viewmodel_compose_version = "2.4.0"

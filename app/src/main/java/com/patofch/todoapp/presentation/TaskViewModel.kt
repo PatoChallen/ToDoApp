@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class ToDoViewModel @Inject constructor(
+class TaskViewModel @Inject constructor(
     private val taskUseCases: TaskUseCases
 ) : ViewModel() {
 
@@ -26,11 +26,11 @@ class ToDoViewModel @Inject constructor(
     val status: MutableState<Status> get() = _status
 
     init {
-        Log.e("ToDoViewModel", "ToDoViewModel init")
+        Log.e("TaskViewModel", "TaskViewModel init")
     }
 
     fun getTasks() {
-        Log.e("ToDoViewModel", "getTasks")
+        Log.e("TaskViewModel", "getTasks")
         _status.value = Status.Loading
         viewModelScope.launch {
             taskUseCases.getTasks()
@@ -45,7 +45,7 @@ class ToDoViewModel @Inject constructor(
     }
 
     fun insertTask(task: Task) {
-        Log.e("ToDoViewModel", "insertTask")
+        Log.e("TaskViewModel", "insertTask")
         _status.value = Status.Loading
         viewModelScope.launch {
             taskUseCases.insertTask(task)
@@ -54,7 +54,7 @@ class ToDoViewModel @Inject constructor(
     }
 
     fun updateTask(task: Task) {
-        Log.e("ToDoViewModel", "updateTask")
+        Log.e("TaskViewModel", "updateTask")
         _status.value = Status.Loading
         viewModelScope.launch {
             taskUseCases.updateTask(task)
@@ -63,7 +63,7 @@ class ToDoViewModel @Inject constructor(
     }
 
     fun deleteTask(task: Task) {
-        Log.e("ToDoViewModel", "deleteTask")
+        Log.e("TaskViewModel", "deleteTask")
         _status.value = Status.Loading
         viewModelScope.launch {
             taskUseCases.deleteTask(task)

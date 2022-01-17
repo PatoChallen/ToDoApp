@@ -2,6 +2,8 @@ package com.patofch.todoapp.data.data_source.model
 
 import com.patofch.todoapp.domain.model.Task
 import com.patofch.todoapp.domain.model.TaskEntityMapper
+import com.patofch.todoapp.domain.utils.toDate
+import com.patofch.todoapp.domain.utils.toDateString
 
 internal class TaskDtoEntityMapperImpl : TaskEntityMapper<TaskDtoEntity> {
 
@@ -12,7 +14,10 @@ internal class TaskDtoEntityMapperImpl : TaskEntityMapper<TaskDtoEntity> {
                 parentId = parentId,
                 name = name,
                 description = description,
-                status = status
+                categoryId = categoryId,
+                creationDate = creationDate.toDate(),
+                limitDate = limitDate?.toDate(),
+                status = Task.TaskStatus.valueOf(status)
             )
         }
     }
@@ -24,7 +29,10 @@ internal class TaskDtoEntityMapperImpl : TaskEntityMapper<TaskDtoEntity> {
                 parentId = parentId,
                 name = name,
                 description = description,
-                status = status
+                categoryId = categoryId,
+                creationDate = creationDate.toDateString(),
+                limitDate = limitDate?.toDateString(),
+                status = status.name
             )
         }
     }
